@@ -25,6 +25,11 @@ matches = re.findall(regex, file_data)
 # Check matches, print results
 # TODO Read in links from answers.txt (hint...this is a CSV file),
 # save in list called 'answer_data'
+with open('answers.txt') as csv_f:
+    csv_r = csv.reader(csv_f, delimiter=',', quoting=csv.QUOTE_ALL)
+
+    for row in csv_r:
+        answer_data = row
 
 
 # Compare answers with matches found using regex, print out any mismatches
