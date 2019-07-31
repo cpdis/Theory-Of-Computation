@@ -3,8 +3,7 @@
 ## State machines:
 
 1. Draw out the state machine for a car's turn signal system. What are the
-   transitions leading to both lights not blinking, one light blinking, the
-   other light blinking, or both lights blinking?
+   transitions leading to both lights not blinking, one light blinking, the other light blinking, or both lights blinking?
 
 ## Regular Expressions
 

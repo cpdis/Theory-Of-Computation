@@ -1,27 +1,35 @@
-import re # module for processing regular expressions https://docs.python.org/3/library/re.html
+import re  # module for processing regular expressions https://docs.python.org/3/library/re.html
 import sys
 import csv
 if __name__ == '__main__':
-  # Exit if command line args entered incorrectly
-  if len(sys.argv) != 2:
-    print("usage: extract_links.py [input_file]")
-    sys.exit(0)
+    # Exit if command line args entered incorrectly
+    if len(sys.argv) != 2:
+        print("usage: extract_links.py [input_file]")
+        sys.exit(0)
 
 # Filename is 2nd command line arg
 filename = sys.argv[1]
 
 # TODO Read HTML file
-
+file_data = ''
+with open(filename) as f:
+    filedata = f.read()
+f.close()
 
 # TODO Set up regex
-
+regex = 'https?:\/\/[^\{\}\[\]\<\>\"\'\ \\\^\|\~]+?\.[^\{\}\[\]\<\>\"\'\ \\\^\|\~]+'
 
 # TODO Find links using regex, save in list called 'matches'
-
+matches = re.findall(regex, file_data)
 
 # Check matches, print results
-# TODO Read in links from answers.txt (hint...this is a CSV file), 
+# TODO Read in links from answers.txt (hint...this is a CSV file),
 # save in list called 'answer_data'
+with open('answers.txt') as csv_f:
+    csv_r = csv.reader(csv_f, delimiter=',', quoting=csv.QUOTE_ALL)
+
+    for row in csv_r:
+        answer_data = row
 
 
 # Compare answers with matches found using regex, print out any mismatches
