@@ -17,7 +17,7 @@ with open(filename) as f:
 f.close()
 
 # TODO Set up regex
-regex = ''
+regex = 'https?:\/\/[^\{\}\[\]\<\>\"\'\ \\\^\|\~]+?\.[^\{\}\[\]\<\>\"\'\ \\\^\|\~]+'
 
 # TODO Find links using regex, save in list called 'matches'
 matches = re.findall(regex, file_data)
