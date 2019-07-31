@@ -11,7 +11,10 @@ if __name__ == '__main__':
 filename = sys.argv[1]
 
 # TODO Read HTML file
-
+filedata = ''
+with open(filename) as file:
+    filedata = file.read()
+file.close()
 
 # TODO Set up regex
 

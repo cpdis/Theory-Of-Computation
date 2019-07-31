@@ -7,6 +7,7 @@ line = input("Enter a phone number to validate or 'exit' when done. ")
 regex = '\+?([\d]{0,3})[-\s]?\(?(\d{3})\)?\s?\-?(\d{3})\s?\-?(\d{4})'
 
 ''' 
+Regex explanation:
 \+ --> Looks for the + character
 ? --> Makes the preceding regex optional
 ([\d]{0,3}) --> Matches between 0 and 3 digits (country code)
