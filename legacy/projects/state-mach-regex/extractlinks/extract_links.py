@@ -13,7 +13,7 @@ filename = sys.argv[1]
 # TODO Read HTML file
 
 
-# TODO Set up regex ✅
+# TODO Set up regex
 
 
 # TODO Find links using regex, save in list called 'matches'
